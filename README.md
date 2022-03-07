@@ -1,10 +1,10 @@
 # SoftiCAR Samba Testing Server
 
-A [Docker](https://www.docker.com/) image of a simple [Samba](https://www.samba.org/) server for unit tests in other [SoftiCAR](https://github.com/softicar) repositories.
+A [Docker](https://www.docker.com/) image of a simple [Samba](https://www.samba.org/) server for unit tests in [SoftiCAR](https://github.com/softicar) repositories.
 
 ## 1 Main Features
 
-- Provide an SMB share to which a single user has full access.
+- Provides an SMB share to which a single user has full access.
 - Integrated health check to avoid a race between SMB server startup and incoming connections.
 
 ## 2 Usage
@@ -29,11 +29,11 @@ To build this image, use:
 docker build -t softicar/samba-testing-server .
 ```
 
-## 4 Releases and Upgrading
+## 4 Releases
 
 So far, we do not create explicit releases for this project. The `main` branch is assumed to be constantly stable.
 
-Images are available on [DockerHub](https://hub.docker.com/r/softicar/samba-testing-server).
+Images are released to [DockerHub](https://hub.docker.com/r/softicar/samba-testing-server).
 
 ## 5 Contributing
 
