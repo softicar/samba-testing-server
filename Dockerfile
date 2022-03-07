@@ -16,7 +16,7 @@ COPY smb.conf /etc/samba/
 
 EXPOSE 137/udp 138/udp 139 445
 
-HEALTHCHECK CMD smbclient -L \\localhost -U % -m SMB3
+HEALTHCHECK --interval=50ms --retries=40 CMD smbclient -L \\localhost -U % -m SMB3
 
 ENTRYPOINT ["/usr/bin/dumb-init", "-v", "--"]
 CMD ["/usr/sbin/smbd", "-FS", "--no-process-group"]
